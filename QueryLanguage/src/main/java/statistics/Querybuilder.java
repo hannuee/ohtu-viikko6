@@ -34,6 +34,11 @@ public class Querybuilder {
         return this;        
     }
     
+    public Querybuilder oneOf(Matcher m1, Matcher m2) {
+        matcher = new Or(m1, m2);
+        return this;
+    }
+    
     public Matcher build() {
         return this.matcher;
     }
